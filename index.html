@@ -1,0 +1,237 @@
+/business-website
+│── index.html        (Home)
+│── about.html        (About Us)
+│── contact.html      (Contact)
+│── style.css         (Styles)
+│── script.js         (Optional JS)
+ 
+
+
+
+:root {
+  --blue: #0a3d62;
+  --yellow: #fbc531;
+  --light: #f5f6fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--light);
+  color: #333;
+}
+
+header {
+  background: var(--blue);
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: var(--yellow);
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--yellow);
+}
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, var(--blue), #1e90ff);
+  color: white;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  background: var(--yellow);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button.submit {
+  background: var(--blue);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--blue);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>My Business</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="hero">
+  <h2>We Help Your Business Grow</h2>
+  <p>Professional services you can trust</p>
+  <button onclick="location.href='contact.html'">Contact Us</button>
+</div>
+
+<section>
+  <h2>What We Do</h2>
+  <p>
+    We provide high-quality solutions tailored to your business needs.
+    Our goal is to help you succeed with modern strategies and tools.
+  </p>
+</section>
+
+<footer>
+  © 2025 My Business
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>My Business</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <h2>About Us</h2>
+  <p>
+    We are a dedicated team focused on delivering excellent results.
+    Our mission is to build long-term relationships with our clients
+    through trust and innovation.
+  </p>
+</section>
+
+<footer>
+  © 2025 My Business
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>My Business</h1>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section>
+  <h2>Contact Us</h2>
+
+  <form onsubmit="sendMessage(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button class="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 My Business
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+function sendMessage(e) {
+  e.preventDefault();
+  alert("Thank you! Your message has been sent.");
+}
